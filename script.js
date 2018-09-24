@@ -6,7 +6,7 @@
 
 let entrada = prompt("Digite um número:");
 
-if(entrada.trim()){
+if(entrada && entrada.trim()){
   let numero = Number(entrada);
   if(numero > 15){
     console.log("Número maior que quinze.");
