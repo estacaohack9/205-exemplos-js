@@ -5,6 +5,14 @@
 // alert(`Olá! Seja bem vindo, ${nome}!!!`);
 
 let entrada = prompt("Digite um número:");
+let continuar = true;
+
+while( (!entrada || !entrada.trim() || isNaN(Number(entrada))) && continuar){
+   continuar = confirm("Você deveria digitar um valor válido. Clique OK para tentar novamente ou Cancelar para sair.");
+  if(continuar){
+    entrada = prompt("Digite um número:");
+  }
+}
 
 if(entrada && entrada.trim()){
   let numero = Number(entrada);
